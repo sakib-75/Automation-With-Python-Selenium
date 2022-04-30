@@ -21,6 +21,12 @@ class RsaHomePage:
         self.goto_login_btn_class = "go-to-login-btn"
         self.info_msg_css = "p.infoMsg"
 
+    def click_check_box1(self):
+        self.driver.find_element(By.ID, self.check_box1_id).click()
+
+    def click_check_box2(self):
+        self.driver.find_element(By.ID, self.checkbox2_id).click()
+
     def click_signin_button(self):
         self.driver.find_element(By.XPATH, self.signin_btn_xpath).click()
 
