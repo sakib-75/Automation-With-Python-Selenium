@@ -1,5 +1,5 @@
+import time
 from selenium.webdriver.common.by import By
-
 from Utilities.common_method_1 import send_text
 
 
@@ -44,3 +44,25 @@ class RsaHomePage:
     def get_login_error_msg(self):
         error_msg = self.driver.find_element(By.CSS_SELECTOR, self.error_msg_css).text
         return error_msg
+
+    def click_forgot_password(self):
+        self.driver.find_element(By.LINK_TEXT, self.forgot_pass_link).click()
+
+    def reset_login(self, name, email, phone):
+        name_inp = self.driver.find_element(By.XPATH, self.name_inp_xpath)
+        email_inp = self.driver.find_element(By.XPATH, self.email_inp_xpath)
+        phone_inp = self.driver.find_element(By.XPATH, self.phone_inp_xpath)
+        send_text(name_inp, name)
+        send_text(email_inp, email)
+        send_text(phone_inp, phone)
+        time.sleep(1)
+        self.driver.find_element(By.CLASS_NAME, self.reset_btn_class).click()
+
+    def get_password(self):
+        text = self.driver.find_element(By.CSS_SELECTOR, self.info_msg_css).text
+        pass_array = text.split("'")
+        password = pass_array[1].split("'")[0]
+        return password
+
+    def click_goto_login_btn(self):
+        self.driver.find_element(By.CLASS_NAME, self.goto_login_btn_class).click()
