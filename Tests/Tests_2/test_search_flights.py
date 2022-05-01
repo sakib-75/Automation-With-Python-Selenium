@@ -11,9 +11,8 @@ class TestSearchFlights:
         home.depart_from("Chennai (MAA)")
         home.going_to("Goa (GOI)")
         home.departure_date("12/05/2022")
+        home.return_date("16/05/2022")
         home.traveller_class_click()
         home.adults_click(5)
         home.senior_citizen_click()
         home.search_flights_btn_click()
-
-

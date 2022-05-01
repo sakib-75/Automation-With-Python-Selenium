@@ -28,18 +28,17 @@ class HomePage:
 
     def depart_from(self, city):
         self.driver.find_element(By.XPATH, self.depart_from_inp).click()
-        select_city(self.all_city(), city)
         time.sleep(1)
+        select_city(self.all_city(), city)
 
     def going_to(self, city):
         self.driver.find_element(By.XPATH, self.going_to_inp).click()
-        select_city(self.all_city(), city)
         time.sleep(1)
+        select_city(self.all_city(), city)
 
     def departure_date(self, date):
         self.driver.find_element(By.XPATH, self.departure_date_inp).click()
         select_date(self.all_date(), date)
-        time.sleep(1)
 
     def return_date(self, date):
         self.driver.find_element(By.XPATH, self.return_date_inp).click()
