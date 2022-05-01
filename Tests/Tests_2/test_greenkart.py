@@ -1,6 +1,7 @@
 import time
 import pytest
 
+from Pages.Pages_2.greencart_promo_page import GreenkartPromo
 from Pages.Pages_2.greenkart_home_page import Greenkart
 
 
@@ -14,3 +15,10 @@ class TestGreenkart:
         home.click_cart_icon()
         home.click_check_out()
         time.sleep(2)
+
+    def test_apply_promo(self):
+        promo = GreenkartPromo(self.driver)
+        promo.enter_promo_code("rahulshettyacademy")
+        promo.click_apply_promo()
+        assert promo.get_promo_info() == "Code applied ..!"
+       
