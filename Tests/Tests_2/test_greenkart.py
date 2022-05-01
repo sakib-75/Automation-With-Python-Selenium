@@ -22,3 +22,4 @@ class TestGreenkart:
         promo.enter_promo_code("rahulshettyacademy")
         promo.click_apply_promo()
         assert promo.get_promo_info() == "Code applied ..!"
+        promo.click_place_order()

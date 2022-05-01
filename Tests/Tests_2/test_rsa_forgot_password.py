@@ -10,7 +10,7 @@ class TestRsaForgotPassword:
         self.driver.get("https://rahulshettyacademy.com/locatorspractice")
         home = RsaHomePage(self.driver)
         home.click_forgot_password()
-        home.reset_login("sakib", "sakib@hmail.com", "01923453212")
+        home.reset_login("sakib", "sakib@gmail.com", "01923453212")
         password = home.get_password()
         home.click_goto_login_btn()
         self.driver.refresh()

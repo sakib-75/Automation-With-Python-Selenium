@@ -7,48 +7,44 @@ class LetcodePages:
         self.driver = driver
 
     # home page
-    signup_xpath = "//a[normalize-space()='Sign up']"
-    login_xpath = "//a[normalize-space()='Log in']"
-    logo_xpath = "//a[@class='navbar-item']"
+    signup_link = (By.XPATH, "//a[normalize-space()='Sign up']")
+    login_link = (By.XPATH, "//a[normalize-space()='Log in']")
 
     # signup page
-    name_inp_id = "name"
-    email_inp_id = "email"
-    password_inp_id = "pass"
-    tc_agree_id = "agree"
-    signup_btn_xpath = "//button[normalize-space()='SIGN UP']"
+    name_inp = (By.ID, "name")
+    email_inp = (By.ID, "email")
+    password_inp = (By.ID, "pass")
+    tc_agree = (By.ID, "agree")
+    signup_btn = (By.XPATH, "//button[normalize-space()='SIGN UP']")
 
     # login page
-    email_inp_name = "email"
-    password_inp_name = "password"
-    login_btn_xpath = "//button[normalize-space()='LOGIN']"
-    logout_btn_xpath = "//a[normalize-space()='Sign out']"
-
-    def click_logo(self):
-        self.driver.find_element(By.XPATH, self.click_logo()).click()
+    login_email_inp = (By.NAME, "email")
+    login_password_inp = (By.NAME, "password")
+    login_btn = (By.XPATH, "//button[normalize-space()='LOGIN']")
+    logout_btn = (By.XPATH, "//a[normalize-space()='Sign out']")
 
     def click_signup(self):
-        self.driver.find_element(By.XPATH, self.signup_xpath).click()
+        self.driver.find_element(*self.signup_link).click()
 
     def click_login(self):
-        self.driver.find_element(By.XPATH, self.login_xpath).click()
+        self.driver.find_element(*self.login_link).click()
 
     def signup(self, name, email, password):
-        name_input = self.driver.find_element(By.ID, self.name_inp_id)
-        email_input = self.driver.find_element(By.ID, self.email_inp_id)
-        password_input = self.driver.find_element(By.ID, self.password_inp_id)
+        name_input = self.driver.find_element(*self.name_inp)
+        email_input = self.driver.find_element(*self.email_inp)
+        password_input = self.driver.find_element(*self.password_inp)
         send_text(name_input, name)
         send_text(email_input, email)
         send_text(password_input, password)
-        self.driver.find_element(By.ID, self.tc_agree_id).click()
-        self.driver.find_element(By.XPATH, self.signup_btn_xpath).click()
+        self.driver.find_element(*self.tc_agree).click()
+        self.driver.find_element(*self.signup_btn).click()
 
     def login(self, email, password):
-        email_input = self.driver.find_element(By.NAME, self.email_inp_name)
-        password_input = self.driver.find_element(By.NAME, self.password_inp_name)
+        email_input = self.driver.find_element(*self.login_email_inp)
+        password_input = self.driver.find_element(*self.login_password_inp)
         send_text(email_input, email)
         send_text(password_input, password)
-        self.driver.find_element(By.XPATH, self.login_btn_xpath).click()
+        self.driver.find_element(*self.login_btn).click()
 
     def click_logout(self):
-        self.driver.find_element(By.XPATH, self.logout_btn_xpath)
+        self.driver.find_element(*self.logout_btn)
