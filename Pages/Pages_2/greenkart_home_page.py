@@ -9,6 +9,7 @@ class Greenkart:
         self.all_add_to_cart_xpath = "//div[@class='product-action']"
         self.cart_icon_xpath = "//a[@class='cart-icon']"
         self.check_out_xpath = "//button[text()='PROCEED TO CHECKOUT']"
+        self.cart_items_xpath = "(//td)[3]"
 
     def all_product_title(self):
         elements = self.driver.find_elements(By.CSS_SELECTOR, self.all_product_title_css)
@@ -28,6 +29,10 @@ class Greenkart:
                 self.all_add_to_cart()[i].click()
                 count += 1
         print("Total added item in cart: ", count)
+
+    def get_cart_items(self):
+        cart_items = self.driver.find_element(By.XPATH, self.cart_items_xpath)
+        return int(cart_items.text)
 
     def click_cart_icon(self):
         self.driver.find_element(By.XPATH, self.cart_icon_xpath).click()
