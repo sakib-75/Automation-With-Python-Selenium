@@ -7,12 +7,14 @@ Automation practice with selenium, python &amp; pytest
 3. Select dropdown
 4. Checkbox, radio button
 5. Alert pop-up window
-6. Click actions
-7. Right click, double click, hover
-8. Drag and drop, slider
-9. Keyboard event
-10. Scroll page
-11. Take screenshot
+6. Frame handling
+7. Multiple window/tab handling
+8. Click actions
+9. Right click, double click, hover
+10. Drag and drop, slider
+11. Keyboard event
+12. Scroll page
+13. Take screenshot
 
 ### Tools & Technology:
 
