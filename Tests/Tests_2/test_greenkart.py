@@ -14,6 +14,7 @@ class TestGreenkart:
         home.add_to_cart(produc_name_list)
         home.click_cart_icon()
         home.click_check_out()
+        assert len(produc_name_list) == home.get_cart_items()
         time.sleep(2)
 
     def test_apply_promo(self):
@@ -21,4 +22,3 @@ class TestGreenkart:
         promo.enter_promo_code("rahulshettyacademy")
         promo.click_apply_promo()
         assert promo.get_promo_info() == "Code applied ..!"
-       
