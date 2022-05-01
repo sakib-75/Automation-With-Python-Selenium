@@ -7,21 +7,21 @@ class RsaHomePage:
     def __init__(self, driver):
         self.driver = driver
 
-        self.user_name_id = "inputUsername"
-        self.password_name = "inputPassword"
-        self.check_box1_id = "chkboxOne"
-        self.checkbox2_id = "chkboxTwo"
-        self.forgot_pass_link = "Forgot your password?"
-        self.signin_btn_xpath = "//button[text()='Sign In']"
-        self.error_msg_css = "p.error"
+    user_name_id = "inputUsername"
+    password_name = "inputPassword"
+    check_box1_id = "chkboxOne"
+    checkbox2_id = "chkboxTwo"
+    forgot_pass_link = "Forgot your password?"
+    signin_btn_xpath = "//button[text()='Sign In']"
+    error_msg_css = "p.error"
 
-        # Forgot password part
-        self.name_inp_xpath = "//input[@placeholder='Name']"
-        self.email_inp_xpath = "//input[@placeholder='Email']"
-        self.phone_inp_xpath = "//input[@placeholder='Phone Number']"
-        self.reset_btn_class = "reset-pwd-btn"
-        self.goto_login_btn_class = "go-to-login-btn"
-        self.info_msg_css = "p.infoMsg"
+    # Forgot password part
+    name_inp_xpath = "//input[@placeholder='Name']"
+    email_inp_xpath = "//input[@placeholder='Email']"
+    phone_inp_xpath = "//input[@placeholder='Phone Number']"
+    reset_btn_class = "reset-pwd-btn"
+    goto_login_btn_class = "go-to-login-btn"
+    info_msg_css = "p.infoMsg"
 
     def login(self, username, password):
         username_inp = self.driver.find_element(By.ID, self.user_name_id)

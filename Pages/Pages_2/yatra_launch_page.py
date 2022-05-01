@@ -7,16 +7,16 @@ class HomePage:
     def __init__(self, driver):
         self.driver = driver
 
-        self.depart_from_inp = "//input[@id='BE_flight_origin_city']"
-        self.going_to_inp = "//input[@id='BE_flight_arrival_city']"
-        self.departure_date_inp = "//input[@id='BE_flight_origin_date']"
-        self.return_date_inp = "//input[@id='BE_flight_arrival_date']"
-        self.all_city_path = "//div[@class='viewport']//div[1]/li"
-        self.all_date_path = "//div[@id='monthWrapper']//tbody//td[@class!='inActiveTd']"
-        self.traveller_class = "//span[@class='txt-ellipses flight_passengerBox travellerPaxBox']"
-        self.adults = "(//span[@class='ddSpinnerPlus'])[1]"
-        self.senior_citizen = "//a[normalize-space()='Senior Citizen']"
-        self.search_flights_btn = "(//input[@id='BE_flight_flsearch_btn'])[1]"
+    depart_from_inp = "//input[@id='BE_flight_origin_city']"
+    going_to_inp = "//input[@id='BE_flight_arrival_city']"
+    departure_date_inp = "//input[@id='BE_flight_origin_date']"
+    return_date_inp = "//input[@id='BE_flight_arrival_date']"
+    all_city_path = "//div[@class='viewport']//div[1]/li"
+    all_date_path = "//div[@id='monthWrapper']//tbody//td[@class!='inActiveTd']"
+    traveller_class = "//span[@class='txt-ellipses flight_passengerBox travellerPaxBox']"
+    adults = "(//span[@class='ddSpinnerPlus'])[1]"
+    senior_citizen = "//a[normalize-space()='Senior Citizen']"
+    search_flights_btn = "(//input[@id='BE_flight_flsearch_btn'])[1]"
 
     def all_city(self):
         elements = self.driver.find_elements(By.XPATH, self.all_city_path)

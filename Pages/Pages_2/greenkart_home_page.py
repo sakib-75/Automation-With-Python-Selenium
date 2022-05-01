@@ -5,11 +5,11 @@ class Greenkart:
     def __init__(self, driver):
         self.driver = driver
 
-        self.all_product_title_css = "h4.product-name"
-        self.all_add_to_cart_xpath = "//div[@class='product-action']"
-        self.cart_icon_xpath = "//a[@class='cart-icon']"
-        self.check_out_xpath = "//button[text()='PROCEED TO CHECKOUT']"
-        self.cart_items_xpath = "(//td)[3]"
+    all_product_title_css = "h4.product-name"
+    all_add_to_cart_xpath = "//div[@class='product-action']"
+    cart_icon_xpath = "//a[@class='cart-icon']"
+    check_out_xpath = "//button[text()='PROCEED TO CHECKOUT']"
+    cart_items_xpath = "(//td)[3]"
 
     def all_product_title(self):
         elements = self.driver.find_elements(By.CSS_SELECTOR, self.all_product_title_css)
