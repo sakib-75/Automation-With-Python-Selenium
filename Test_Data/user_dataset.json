@@ -1,0 +1,17 @@
+{
+  "user_1": {
+    "name": "Sakib",
+    "email": "sakib@gmail.com",
+    "password": "sakib123"
+  },
+  "user_2": {
+    "name": "Mehedi",
+    "email": "mehedi@gmail.com",
+    "password": "mehedi123"
+  },
+  "user_3": {
+    "name": "Hassan",
+    "email": "hassan@gmail.com",
+    "password": "hassan123"
+  }
+}
