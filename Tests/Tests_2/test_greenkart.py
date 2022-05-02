@@ -1,8 +1,8 @@
 import time
 import pytest
 
-from Pages.Pages_2.greencart_promo_page import GreenkartPromo
-from Pages.Pages_2.greenkart_home_page import Greenkart
+from Pages.greencart_promo_page import GreenkartPromo
+from Pages.greenkart_home_page import Greenkart
 
 
 @pytest.mark.usefixtures("setup")

@@ -1,5 +1,6 @@
 import pytest
-from Pages.Pages_2.yatra_launch_page import HomePage
+
+from Pages.yatra_launch_page import HomePage
 
 
 @pytest.mark.usefixtures("setup")

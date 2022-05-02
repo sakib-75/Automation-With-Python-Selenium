@@ -25,3 +25,4 @@ class GreenkartPromo:
 
     def click_place_order(self):
         self.driver.find_element(*self.place_order_btn_path).click()
+

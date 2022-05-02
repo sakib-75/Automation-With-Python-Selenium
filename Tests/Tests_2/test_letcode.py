@@ -1,7 +1,8 @@
 import unittest
 import pytest
 from ddt import ddt, file_data
-from Pages.Pages_2.letcode_pages import LetcodePages
+
+from Pages.letcode_pages import LetcodePages
 
 
 @ddt

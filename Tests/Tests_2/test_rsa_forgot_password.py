@@ -1,7 +1,7 @@
 import time
 import pytest
 
-from Pages.Pages_2.rsa_home_page import RsaHomePage
+from Pages.rsa_home_page import RsaHomePage
 
 
 @pytest.mark.usefixtures("setup")
