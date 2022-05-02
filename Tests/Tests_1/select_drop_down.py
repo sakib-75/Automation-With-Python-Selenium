@@ -1,7 +1,7 @@
 import time
 
 import pytest
-from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
@@ -10,6 +10,7 @@ from selenium.webdriver.support.select import Select
 class TestSelectDropDown:
     def test_select_drop_down(self):
         driver = self.driver
+        actions = self.actions
         driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple")
         driver.switch_to.frame("iframeResult")
 
@@ -17,7 +18,6 @@ class TestSelectDropDown:
         select = Select(select_element)
         select.select_by_index(0)
 
-        actions = ActionChains(driver)
         actions.key_down(Keys.CONTROL) \
             .click(select.options[3]) \
             .click(select.options[1]) \
