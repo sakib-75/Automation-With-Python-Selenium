@@ -1,7 +1,20 @@
 ## Automation-With-Python-Selenium
+
 Automation practice with selenium, python &amp; pytest
 
+#### Run pytest using cmd
+
+* pytest (for all test)
+* pytest -v -s test.py
+
+#### Generate allure report
+
+* pip install allure-pytest
+* py.test --alluredir="allure_result" ./tests
+* allure serve %allure_result_folder%
+
 ### This project covers the following scenario:
+
 1. Verify Title, URL
 2. Navigate page
 3. Select dropdown
